@@ -9,7 +9,6 @@ import { template } from '@angular/core/src/render3';
   template: `
   <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Candy</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,13 +18,13 @@ import { template } from '@angular/core/src/render3';
       <a class="nav-link" routerLink="/list" routerLinkActive="active">List</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" routerLink="/add" routerLinkActive="active">Add</a>
+      <a class="nav-link"routerLink="/add" routerLinkActive="active">Add</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" routerLink="/list">Candies: {{candies.length}}</a>
+      <a class="nav-link "routerLink="/list">Candies: {{candies.length}}</a>
       </li>
       <router-outlet></router-outlet>
-    </ul>
+  </ul>
   </div>
   </nav>
   </div>
