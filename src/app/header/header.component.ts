@@ -16,15 +16,16 @@ import { template } from '@angular/core/src/render3';
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">List</a>
+      <a class="nav-link" routerLink="/list" routerLinkActive="active">List</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Add</a>
+      <a class="nav-link" routerLink="/add" routerLinkActive="active">Add</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Candies: {{candies.length}}</a>
+      <a class="nav-link" routerLink="/list">Candies: {{candies.length}}</a>
       </li>
-  </ul>
+      <router-outlet></router-outlet>
+    </ul>
   </div>
   </nav>
   </div>
