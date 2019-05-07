@@ -22,5 +22,13 @@ export class CandyDataService {
     this.candies.push(candy);
   }
 
+  deleteCandy(candy: Candy){
+    console.log("triggered")
+    const index: number = this.candies.indexOf(candy)
+    if (index !== -1){
+      this.candies.splice(index, 1);
+    }
+  }
+
   constructor() { }
 }

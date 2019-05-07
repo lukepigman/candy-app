@@ -11,11 +11,23 @@ export class CandyListComponent implements OnInit {
 
   candies: Candy[];
 
+
+
+
   constructor(private candyDataService: CandyDataService) {
+  }
+
+  deleteCandy(candy: Candy): void {
+    console.log("Triggered")
+    const index: number = this.candies.indexOf(candy);
+    this.candies.splice(index, 1);
+
+
   }
 
   ngOnInit() {
     this.candyDataService.getCandy().subscribe(c => (this.candies = c));
+
   }
 
 }
