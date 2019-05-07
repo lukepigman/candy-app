@@ -10,7 +10,7 @@ import { Candy } from '../candy';
 export class CandyListComponent implements OnInit {
 
   candies: Candy[];
-
+  selectedCandy: Candy
 
 
 
@@ -19,6 +19,8 @@ export class CandyListComponent implements OnInit {
 
   deleteCandy(candy: Candy): void {
     console.log("Triggered")
+    console.log("removed candy at index " + this.candies.indexOf(candy))
+    this.selectedCandy = candy
     const index: number = this.candies.indexOf(candy);
     this.candies.splice(index, 1);
 
